@@ -39,7 +39,7 @@ function sortearColaborador(lista) {
 btnSortear.addEventListener("click", async () => {
     btnSortear.disabled = true;
     btnSortear.textContent = "Sorteando...";
-    containerResultado.textContent = "";
+    containerResultado.innerHTML = "";
 
     try {
         const arquivo = arquivosPorTurno[selectTurnos.value];
@@ -50,9 +50,9 @@ btnSortear.addEventListener("click", async () => {
         const funcSorteado = sortearColaborador(funcionarios);
 
         if (funcSorteado) {
-            containerResultado.textContent = `Funcionário sorteado: ${funcSorteado.nome}`;
+            containerResultado.innerHTML = `<b>Funcionário sorteado:</b> ${funcSorteado.nome}`;
         } else {
-            containerResultado.textContent = "Não há colaboradores cadastrados para esse turno.";
+            containerResultado.innerHTML = "Não há colaboradores cadastrados para esse turno.";
         }
     } finally {
         btnSortear.disabled = false;
