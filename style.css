@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    background: #fff;
+}
+
+#contentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    width: min(100%, 760px);
+    min-height: 320px;
+    padding: clamp(24px, 5vw, 48px);
+    border-radius: 12px;
+    border: 1px solid rgb(65, 170, 255);
+    background-color: rgba(0, 81, 148, 0.062);
+    text-align: center;
+}
+
+#tituloPagina {
+    color: rgb(0, 70, 128);
+    font-size: clamp(1.6rem, 4vw, 2.25rem);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+#selectContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 520px;
+    text-align: left;
+}
+
+#selectContainer label {
+    line-height: 1.5;
+}
+
+#turnoOpcoes {
+    width: 100%;
+    min-height: 48px;
+    padding: 10px 12px;
+    cursor: pointer;
+    outline: none;
+    font: 600 1rem "Poppins", sans-serif;
+    border-radius: 6px;
+    border: 1px solid rgb(65, 170, 255);
+    background-color: #fff;
+    color: #17324a;
+}
+
+#turnoOpcoes:focus-visible,
+#btnSortear:focus-visible {
+    outline: 3px solid rgba(65, 170, 255, 0.45);
+    outline-offset: 3px;
+}
+
+#btnSortear {
+    width: 100%;
+    max-width: 260px;
+    min-height: 48px;
+    padding: 12px 24px;
+    cursor: pointer;
+    background-color: rgb(0, 82, 148);
+    color: #fff;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+
+#resultado {
+    width: 100%;
+    min-height: 24px;
+    margin-top: 2px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    transition: opacity .2s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    #btnSortear:hover {
+        border-color: rgb(0, 82, 148);
+        background-color: #fff;
+        color: rgb(0, 82, 148);
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 16px;
+        align-items: center;
+    }
+
+    #contentContainer {
+        width: 100%;
+        min-height: auto;
+        padding: 28px 20px;
+        gap: 20px;
+        border-radius: 10px;
+    }
+
+    #tituloPagina {
+        font-size: clamp(1.5rem, 7vw, 2rem);
+    }
+
+    #selectContainer {
+        gap: 8px;
+    }
+
+    #btnSortear {
+        max-width: none;
+        min-height: 52px;
+    }
+
+    #resultado {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    body {
+        padding: 10px;
+    }
+
+    #contentContainer {
+        padding: 24px 14px;
+    }
+
+    #tituloPagina {
+        font-size: 1.4rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

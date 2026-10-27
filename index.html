@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="theme-color" content="#005294">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Sorteador para Etilômetro</title>
 </head>
+
 <body>
-
-    <h1>Sortear Colaborador</h1>
-    <button id="btnsortear">Sortear</button>
-    <div id="resultado"></div>
-
+    <main id="contentContainer">
+        <h1 id="tituloPagina">Sortear Colaborador</h1>
+        <div id="selectContainer">
+            <label for="turnoOpcoes">Selecione o turno do funcionário que deseja sortear:</label>
+            <select name="opTurno" id="turnoOpcoes">
+                <option value="manha">Manhã</option>
+                <option value="tarde">Tarde</option>
+                <option value="noite">Noite</option>
+            </select>
+        </div>
+        <button id="btnSortear" type="button">Sortear</button>
+        <div id="resultado" aria-live="polite" role="status"></div>
+    </main>
     <script src="./script.js"></script>
-
 </body>
+
 </html>
